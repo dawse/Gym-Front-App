@@ -1,0 +1,151 @@
+.image-backround{ 
+    filter: blur(4px);
+    width: 100%;
+   }
+   .bg-text {
+       background-color: rgba(0, 0, 0, 0.7); 
+       color: #fff;
+       font-weight: bold;
+       border: 3px solid #f1f1f1;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 2;
+       width: 80%;
+       max-width: 600px;
+       padding: 30px;
+       text-align: center;
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+       border-radius: 15px;
+       font-size: 1.5rem;
+       line-height: 1.8;
+       backdrop-filter: blur(10px);
+       transition: all 0.3s ease-in-out;
+       animation: fadeIn 1s ease-in-out forwards;
+   }
+   
+   .bg-text:hover {
+       background-color: rgba(0, 0, 0, 0.8);
+       transform: translate(-50%, -50%) scale(1.05);
+       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+   }
+   
+   @media (max-width: 768px) {
+       .bg-text {
+           width: 90%;
+           font-size: 1.2rem;
+           padding: 20px;
+       }
+   }
+   
+   @media (max-width: 480px) {
+       .bg-text {
+           width: 95%;
+           font-size: 1rem;
+           padding: 15px;
+       }
+   }
+   
+   @keyframes fadeIn {
+       0% {
+           opacity: 0;
+           transform: translate(-50%, -45%);
+       }
+       100% {
+           opacity: 1;
+           transform: translate(-50%, -50%);
+       }
+   }
+
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+   .title-user-info {
+       font-family: 'Roboto', sans-serif;
+       font-size: 1rem;
+       color: #ff4500;
+       text-align: center;
+       margin-bottom: 20px;
+       text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       animation: titleAnimation 1s ease-in-out;
+       border-bottom: 3px solid #ff4500;
+       display: inline-block;
+       padding-bottom: 5px;
+       background: linear-gradient(45deg, rgba(255, 69, 0, 0.8), rgba(255, 140, 0, 0.8));
+       background-clip: text;
+       -webkit-background-clip: text;
+       color: transparent;
+   }
+   
+   @keyframes titleAnimation {
+       0% {
+           opacity: 0;
+           transform: translateY(-20px);
+       }
+       100% {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+   
+   .button-user-info {
+       display: inline-block;
+       font-family: 'Roboto', sans-serif;
+       font-size: 1rem;
+       color: #fff;
+       background-color: #ff4500;
+       border: 2px solid #ff4500;
+       border-radius: 30px;
+       padding: 10px 20px;
+       text-align: center;
+       text-decoration: none;
+       cursor: pointer;
+       transition: all 0.3s ease-in-out;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+       outline: none;
+       text-transform: uppercase;
+       letter-spacing: 1.5px;
+       position: relative;
+       overflow: hidden;
+   }
+   
+   .button-user-info::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: -100%;
+       width: 200%;
+       height: 100%;
+       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+       transition: transform 0.5s ease-in-out;
+       z-index: 1;
+   }
+   
+   .button-user-info:hover::before {
+       transform: translateX(100%);
+   }
+   
+   .button-user-info:hover {
+       color: #ff4500;
+       background-color: #fff;
+       border-color: #ff4500;
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+       transform: scale(1.05);
+   }
+   
+   .button-user-info:active {
+       background-color: #e63e00;
+       border-color: #e63e00;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+       transform: scale(0.95);
+   }
+   
+   .button-user-info span {
+       position: relative;
+       z-index: 2;
+   }
+   
+   
+   
