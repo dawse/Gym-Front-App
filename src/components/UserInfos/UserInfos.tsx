@@ -1,4 +1,5 @@
 import Age from "./Age";
+import BodyFat from "./BodyFat";
 import BodyGoal from "./BodyGoal";
 import BodyType from "./BodyType";
 import"./UserInfos.css";
@@ -12,6 +13,7 @@ return (<div>
 <Age youngAdult={"Age: 18-29"} earlyMidlife={"Age: 30-39"} midLife={"Age: 40-49"} goldenYears={"Age: 50+"}/>
 <BodyType/>
 <BodyGoal/>
+<BodyFat/>
 </div>
 
 );
