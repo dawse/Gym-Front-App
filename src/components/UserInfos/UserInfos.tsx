@@ -2,6 +2,8 @@ import Age from "./Age";
 import BodyFat from "./BodyFat";
 import BodyGoal from "./BodyGoal";
 import BodyType from "./BodyType";
+import HeightWeight from "./HeightWeight";
+import LevelOfFitness from "./LevelOfFitness";
 import"./UserInfos.css";
 const UserInfos : React.FC=()=>{ 
 return (<div>
@@ -14,6 +16,8 @@ return (<div>
 <BodyType/>
 <BodyGoal/>
 <BodyFat/>
+<HeightWeight/>
+<LevelOfFitness/>
 </div>
 
 );
