@@ -1,9 +1,12 @@
 import './App.css';
 import UserInfos from './components/UserInfos/UserInfos';
+import { UserProvider } from './Context/Context';
 
 function App() {
   return (
-   <div><UserInfos/></div>
+    <UserProvider>
+    <UserInfos/>
+    </UserProvider>
   );
 }
 

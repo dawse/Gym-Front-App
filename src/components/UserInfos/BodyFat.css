@@ -1,0 +1,50 @@
+.body-fat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  
+  .body-fat-container img {
+    width: 300px; 
+    height: 500px; 
+    object-fit: cover; 
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #1976d2; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.6s forwards; 
+  }
+  
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .body-fat-container .MuiBox-root {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+  
+  .body-fat-container .MuiSlider-root {
+    color: #1976d2;
+  }
+  
+  .body-fat-container .MuiSlider-markLabel {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
