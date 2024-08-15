@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../Context/Context";
 
 const BodyGoal:React.FC=()=>{ 
     const{updateUser}=useUsers();
+    const navigate=useNavigate();
     const handleSelectedBodyGoal =(goal:string)=>{ 
         updateUser({goal});
         console.log("selected body goal:"+goal);
+        navigate('/bodyFat');
     } 
 return(<div className="body-type-container">
     <div className="body-type" onClick={()=>handleSelectedBodyGoal("lose weight")}>

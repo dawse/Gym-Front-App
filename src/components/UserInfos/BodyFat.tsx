@@ -3,6 +3,7 @@ import "./BodyFat.css";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { useUsers } from "../../Context/Context";
+import { useNavigate } from "react-router-dom";
 
 function valuetext(value: number) {
   return `${value}%`;
@@ -11,13 +12,16 @@ function valuetext(value: number) {
 const BodyFat: React.FC = () => { 
   const [value, setValue] = useState<number>(9);
   const { updateUser } = useUsers();
-
+  const navigate=useNavigate();
   const handleChange = (event: Event, newValue: number | number[]) => { 
     const bodyFatValue = newValue as number;
     setValue(bodyFatValue);
     updateUser({ levelOfFat: bodyFatValue }); 
     console.log("Body fat value:", bodyFatValue);
   };
+  const handleValidation=()=>{ 
+    navigate('/height&weight');
+  }
 
   const renderContent = (value: number) => { 
     switch(value){
@@ -35,8 +39,6 @@ const BodyFat: React.FC = () => {
         return <img src="bodyFat34.PNG" alt="34% body fat" />;
       case 39: 
         return <img src="bodyFat39.PNG" alt="39% body fat" />;
-      default:
-        return null;
     }
   };
 
@@ -57,6 +59,7 @@ const BodyFat: React.FC = () => {
           max={39}
           value={value} 
         />
+        <button className="validate-body-fat" onClick={handleValidation}>Validate</button>
       </Box>
     </div>
   );

@@ -10,7 +10,7 @@ interface UserInfo {
   height?: number;
   weight?: number;
   targetWeight?: number;
-  nbrTrainigHours?: number;
+  nbrTraningHours?: number;
   levelOfFitness?: string;
 }
 

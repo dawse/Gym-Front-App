@@ -1,25 +1,17 @@
-import Age from "./Age";
-import BodyFat from "./BodyFat";
-import BodyGoal from "./BodyGoal";
-import BodyType from "./BodyType";
-import HeightWeight from "./HeightWeight";
-import LevelOfFitness from "./LevelOfFitness";
+import { useNavigate } from 'react-router-dom';
 import"./UserInfos.css";
 const UserInfos : React.FC=()=>{ 
+  const navigate = useNavigate();
+ const  handleJoinClick=()=>{ 
+  navigate('/age');
+  };
 return (<div>
     <img src="gymBackround.PNG" alt ="Backround" className="image-backround"></img>
     <div className="bg-text">
   <h3 className="title-user-info">Stronger Every Day – Join Now and Discover Your Potential!</h3>
-  <button className="button-user-info">Join the Movement</button>
+  <button className="button-user-info" onClick={handleJoinClick}>Join the Movement</button>
 </div>
-<Age youngAdult={"Age: 18-29"} earlyMidlife={"Age: 30-39"} midLife={"Age: 40-49"} goldenYears={"Age: 50+"}/>
-<BodyType/>
-<BodyGoal/>
-<BodyFat/>
-<HeightWeight/>
-<LevelOfFitness/>
 </div>
-
 );
 };
 export default UserInfos ; 

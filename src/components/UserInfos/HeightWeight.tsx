@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useUsers } from "../../Context/Context";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -14,6 +15,7 @@ const theme = createTheme({
 });
 
 const HeightWeight: React.FC = () => {
+  const navigate = useNavigate();
   const {updateUser}=useUsers();
   const [height,setHeight]=useState<number>(); 
   const [weight, setWeight] = useState<number >();
@@ -36,6 +38,9 @@ const HeightWeight: React.FC = () => {
     updateUser({ targetWeight: newTargetWeight });
     console.log("target weight given by the user:"+newTargetWeight);
   };
+  const handleValidation=()=>{ 
+    navigate('/levelOfFitness');
+  }
   return (
     <ThemeProvider theme={theme}>
       <div className="height-weight-container">
@@ -94,7 +99,9 @@ const HeightWeight: React.FC = () => {
           />
         </Box>
       </div>
+      <button className="validate" onClick={handleValidation}>Validate</button>
     </ThemeProvider>
+  
   );
 }
 

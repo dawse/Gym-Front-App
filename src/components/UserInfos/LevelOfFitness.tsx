@@ -16,7 +16,7 @@ const LevelOfFitness: React.FC = () => {
   const handleChangeTimeSpent = (event: React.ChangeEvent<HTMLInputElement>) => { 
     const newTimespent = parseInt(event.target.value);
     setTimeSpent(newTimespent);
-    updateUser({ nbrTrainigHours: newTimespent }); 
+    updateUser({ nbrTraningHours: newTimespent }); 
     console.log("Time spent in the gym:", newTimespent); 
   };
   const handleLevelChange = (event: SelectChangeEvent) => {
@@ -54,7 +54,7 @@ const LevelOfFitness: React.FC = () => {
           onChange={handleChangeTimeSpent}
         />
       </Box>
-      <button onClick={postUser}>Add test</button>
+      <button onClick={postUser} className="add-user-infos">Add Your Informations</button>
     </div>
   );
 };

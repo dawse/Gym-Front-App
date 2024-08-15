@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { useUsers } from "../../Context/Context";
 import"./BodyType.css";
 
 const BodyType:React.FC=()=>{ 
     const{updateUser}=useUsers(); 
+    const navigate = useNavigate();
     const handleSelectedBodyType=(bodyType:string) =>{  
         updateUser({bodyType}); 
         console.log("selected body type : "+bodyType);
+        navigate('/bodyGoal');
     }
 return (<div className="body-type-container">
     <div className="body-type" onClick={()=>handleSelectedBodyType("slim")}>
